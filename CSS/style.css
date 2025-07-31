@@ -55,7 +55,8 @@ a{
 }
 img{
     width: 100%;
-    object-fit: fill;
+    object-fit: cover;
+    object-position: center center;
     
 }
 /* ESTILIZAÇÕES ESPECIFICAS - NAVEGAÇÃO */
@@ -76,10 +77,10 @@ img{
 .menu-links-ul > li{
     text-decoration: none;
     color: #5a706c;
-    margin-top: 8px;
+    margin-top: 10px;
     padding: 8px 0px;
     font-size: 1.2rem;
-    box-shadow: 2px 2px 8px #dedede;
+    box-shadow: 2px 2px 8px #bbbbbb;
 }
 .menu-links-ul > li:hover{
     background-color:#e9e9e9;
@@ -91,8 +92,8 @@ img{
 }
 /* ESTILIZAÇÕES ESPECIFICAS - MAIN/ SECTIONS */
 .caixa-imagem{
-    padding-bottom: 40px;
-    width: 100%;
+    overflow: hidden;
+    padding-bottom:30px;
 }
 span.tag{
     padding: 3px;
@@ -104,4 +105,34 @@ ul > .tipo{
 }
 .link{
     color: #5a706c;
+}
+/* CONFIGURAÇÕES DE RESPONSIVIDADE */
+@media screen and (max-width:765px) {
+
+    header, nav, section, footer{  
+        padding: 30px 10px;
+    }
+    .menu{  
+        display: block;
+    }
+    .menu-links, .indice{   
+        padding: 0px;
+        width: 100%;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+    h2{
+        font-size: 1.5rem; 
+    }
+    p{
+        text-align: left;
+    }
+    .caixa-imagem{
+        overflow: hidden;
+        padding: 0px 10px 30px;
+    }
+    
 }
